@@ -1,0 +1,33 @@
+Write a Python program to compute the sum of the two reversed numbers and display the sum in reversed form. Go to the editor
+Input : 13, 14
+Output : 27
+
+My answer: 
+def main():
+    first_number = "Wrong"
+    second_number = "Wrong"
+
+    while type(first_number) != int or type(second_number) != int:
+            try:
+                first_number = int(input("Please enter the first number: "))
+                second_number = int(input("Please enter the second number: "))
+            except ValueError:
+                continue
+    lst1 = []
+    lst2 = []
+    for i in str(first_number):
+        lst1.append(str(i))
+    for i in str(second_number):
+        lst2.append(str(i))
+    lst1.reverse()
+    lst2.reverse()
+    lst1 = "".join(lst1)
+    lst2 = "".join(lst2)
+    sum = list(str(int(lst1)+int(lst2)))
+    sum.reverse()
+    sum = "".join(sum)
+    print(sum)
+
+
+
+main()
